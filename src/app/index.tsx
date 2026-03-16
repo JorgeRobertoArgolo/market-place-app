@@ -1,7 +1,17 @@
 import { Redirect } from 'expo-router';
 
 export default function App () {
-    return (
-        <Redirect href={'/login'}/>
-    );
+    
+    // const userData = {
+    //     tojen: 'awdasdasdasfafafsad',
+    //     name: 'User teste',
+    // };
+
+    const userData = null;
+
+    if (userData) {
+        return (<Redirect href={'/(private)/home'}/>);
+    }
+    
+    return (<Redirect href={'/login'}/>);
 }
